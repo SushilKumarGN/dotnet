@@ -1,0 +1,26 @@
+
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Invoice } from '../invoice'; // Import the Invoice interface
+
+@Injectable({
+  providedIn: 'root'
+})
+export class InvoiceService {
+  private apiUrl = 'https://localhost:7159'; // Replace with your API URL
+
+  constructor(private http: HttpClient) { }
+
+  addInvoice(invoice: Invoice): Observable<any> {
+    return this.http.post(`${this.apiUrl}/api/Invoice`, invoice); // Use the correct API endpoint
+  }
+
+  deleteInvoice(invoiceId: number): Observable<void> {
+    const url = `${this.apiUrl}/api/Invoice/${invoiceId}`;
+    return this.http.delete<void>(url);
+  }
+
+  // Add more methods for fetching, updating, and other invoice-related operations as needed.
+}
