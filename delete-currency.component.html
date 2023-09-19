@@ -1,0 +1,11 @@
+<app-top-three-navigation>      </app-top-three-navigation>
+<div class="container">
+    <h2>Delete Currency</h2>
+  
+    <div class="form-group">
+      <label for="currencyId">Currency ID:</label>
+      <input type="number" id="currencyId" class="form-control" [(ngModel)]="currencyToDeleteId" required>
+    </div>
+    
+    <button (click)="deleteCurrency()" class="btn btn-danger">Delete Currency</button>
+</div>

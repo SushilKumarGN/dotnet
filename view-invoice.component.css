@@ -1,0 +1,48 @@
+/* VendorListComponent Styles */
+
+/* Center-align the heading and add margin at the bottom */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Remove bullet points and padding from the ul (unordered list) */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style for each list item (vendor) */
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add alternating background colors for odd and even-indexed items */
+  li:nth-child(odd) {
+    background-color: #f9f9f9; /* Alternate color for odd-indexed items */
+  }
+  
+  li:nth-child(even) {
+    background-color: #e0e0e0; /* Alternate color for even-indexed items */
+  }
+  
+  /* Style for <strong> elements (bold text) */
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Add margin top and bottom for horizontal lines */
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the "No vendors available" message */
+  p {
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+    margin-top: 20px;
+  }
+  

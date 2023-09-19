@@ -1,0 +1,11 @@
+<app-top-two-navigation></app-top-two-navigation>
+<div class="container">
+    <h2>Delete Invoice</h2>
+  
+    <div class="form-group">
+      <label for="invoiceId">Invoice ID:</label>
+      <input type="number" id="invoiceId" class="form-control" [(ngModel)]="invoiceToDeleteId" required>
+    </div>
+    
+    <button (click)="deleteInvoice()" class="btn btn-danger">Delete Invoice</button>
+</div>

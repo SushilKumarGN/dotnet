@@ -1,0 +1,25 @@
+<app-top-three-navigation></app-top-three-navigation>
+<div class="container">
+    <h2>View Currencies</h2>
+
+    <div *ngIf="currencies.length > 0; else noCurrencies">
+        <ul>
+            <li *ngFor="let currency of currencies">
+                <div>
+                    <strong>Currency ID:</strong> {{ currency.currencyId }}
+                </div>
+                <div>
+                    <strong>Currency Name:</strong> {{ currency.currencyName }}
+                </div>
+                <div>
+                    <strong>Currency Code:</strong> {{ currency.currencyCode }}
+                </div>
+                <hr>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #noCurrencies>
+        <p>No currencies available.</p>
+    </ng-template>
+</div>

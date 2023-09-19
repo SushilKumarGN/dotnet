@@ -1,0 +1,38 @@
+<app-top-two-navigation></app-top-two-navigation>
+<h2>View Invoices</h2>
+
+<div *ngIf="invoices.length > 0; else noInvoices">
+  <ul>
+    <li *ngFor="let invoice of invoices">
+      <div>
+        <strong>Invoice ID:</strong> {{ invoice.invoiceId }}
+      </div>
+      <div>
+        <strong>Invoice Number:</strong> {{ invoice.invoiceNumber }}
+      </div>
+      <div>
+        <strong>Currency ID:</strong> {{ invoice.invoiceCurrencyId }}
+      </div>
+      <div>
+        <strong>Vendor ID:</strong> {{ invoice.vendorId }}
+      </div>
+      <div>
+        <strong>Invoice Amount:</strong> {{ invoice.invoiceAmount }}
+      </div>
+      <div>
+        <strong>Received Date:</strong> {{ invoice.invoiceReceivedDate | date:'medium' }}
+      </div>
+      <div>
+        <strong>Due Date:</strong> {{ invoice.invoiceDueDate | date:'medium' }}
+      </div>
+      <div>
+        <strong>Is Active:</strong> {{ invoice.isActive }}
+      </div>
+      <hr>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noInvoices>
+  <p>No invoices available.</p>
+</ng-template>
